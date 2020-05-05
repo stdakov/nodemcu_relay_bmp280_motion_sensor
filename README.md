@@ -4,7 +4,7 @@
 ![](img/homekit.PNG)
 ![](img/homebridge.png)
 
-## Circular diagram
+## Circuit diagram
 ![](img/nodemcu_relay_bmp280_motion.png)
 
 ## Accomplished Project
