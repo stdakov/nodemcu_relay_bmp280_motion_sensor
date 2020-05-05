@@ -1,0 +1,35 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "*******************",
+        "port": 53651,
+        "pin": "**********"
+    },
+    "accessories": [
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Relay",
+            "url": "mqtt://192.168.1.10",
+            "caption": "relay",
+            "topics": {
+                "getOn": "mcu_relay_v12/light/out",
+                "setOn": "mcu_relay_v12/light/in"
+            },
+            "integerValue": "true to use 1|0 instead of true|false default onValue and offValue",
+            "onValue": "1",
+            "offValue": "0"
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "temperatureSensor",
+            "name": "RelayTemp",
+            "url": "mqtt://192.168.1.10",
+            "caption": "temperature",
+            "topics": {
+                "getCurrentTemperature": "mcu_relay_v12/sensor/temperature"
+            }
+        }
+    ],
+    "platforms": []
+}
